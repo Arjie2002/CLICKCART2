@@ -40,6 +40,7 @@ Partial Class Products
         txtProductPrice = New TextBox()
         txtProductCategoryID = New TextBox()
         txtProductQuantity = New TextBox()
+        btnExport = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -205,11 +206,25 @@ Partial Class Products
         txtProductQuantity.Size = New Size(280, 30)
         txtProductQuantity.TabIndex = 16
         ' 
+        ' btnExport
+        ' 
+        btnExport.BackColor = Color.FromArgb(CByte(255), CByte(224), CByte(192))
+        btnExport.FlatAppearance.BorderSize = 0
+        btnExport.FlatStyle = FlatStyle.Flat
+        btnExport.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point)
+        btnExport.Location = New Point(61, 559)
+        btnExport.Name = "btnExport"
+        btnExport.Size = New Size(114, 35)
+        btnExport.TabIndex = 20
+        btnExport.Text = "Export"
+        btnExport.UseVisualStyleBackColor = False
+        ' 
         ' Products
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1267, 611)
+        Controls.Add(btnExport)
         Controls.Add(txtProductQuantity)
         Controls.Add(txtProductCategoryID)
         Controls.Add(txtProductPrice)
@@ -249,4 +264,5 @@ Partial Class Products
     Friend WithEvents Prod_Quantity As DataGridViewTextBoxColumn
     Friend WithEvents Prod_CategID As DataGridViewTextBoxColumn
     Friend WithEvents txtProductQuantity As TextBox
+    Friend WithEvents btnExport As Button
 End Class

@@ -37,6 +37,7 @@ Partial Class Categories
         txtCategoryID = New TextBox()
         txtCategoryName = New TextBox()
         txtCategoryDescription = New TextBox()
+        btnExport = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -181,11 +182,25 @@ Partial Class Categories
         txtCategoryDescription.Size = New Size(280, 81)
         txtCategoryDescription.TabIndex = 12
         ' 
+        ' btnExport
+        ' 
+        btnExport.BackColor = Color.FromArgb(CByte(255), CByte(224), CByte(192))
+        btnExport.FlatAppearance.BorderSize = 0
+        btnExport.FlatStyle = FlatStyle.Flat
+        btnExport.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point)
+        btnExport.Location = New Point(63, 566)
+        btnExport.Name = "btnExport"
+        btnExport.Size = New Size(114, 35)
+        btnExport.TabIndex = 20
+        btnExport.Text = "Export"
+        btnExport.UseVisualStyleBackColor = False
+        ' 
         ' Categories
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1267, 611)
+        Controls.Add(btnExport)
         Controls.Add(txtCategoryDescription)
         Controls.Add(txtCategoryName)
         Controls.Add(txtCategoryID)
@@ -222,4 +237,5 @@ Partial Class Categories
     Friend WithEvents Categ_ID As DataGridViewTextBoxColumn
     Friend WithEvents Categ_Name As DataGridViewTextBoxColumn
     Friend WithEvents Categ_Description As DataGridViewTextBoxColumn
+    Friend WithEvents btnExport As Button
 End Class

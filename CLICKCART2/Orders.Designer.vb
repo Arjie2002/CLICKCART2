@@ -40,6 +40,7 @@ Partial Class Orders
         txtOrderDate = New TextBox()
         txtOrderAmount = New TextBox()
         txtOrderCustID = New TextBox()
+        btnExport = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -205,11 +206,25 @@ Partial Class Orders
         txtOrderCustID.Size = New Size(280, 30)
         txtOrderCustID.TabIndex = 16
         ' 
+        ' btnExport
+        ' 
+        btnExport.BackColor = Color.FromArgb(CByte(255), CByte(224), CByte(192))
+        btnExport.FlatAppearance.BorderSize = 0
+        btnExport.FlatStyle = FlatStyle.Flat
+        btnExport.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point)
+        btnExport.Location = New Point(61, 562)
+        btnExport.Name = "btnExport"
+        btnExport.Size = New Size(114, 35)
+        btnExport.TabIndex = 20
+        btnExport.Text = "Export"
+        btnExport.UseVisualStyleBackColor = False
+        ' 
         ' Orders
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1267, 611)
+        Controls.Add(btnExport)
         Controls.Add(txtOrderCustID)
         Controls.Add(txtOrderAmount)
         Controls.Add(txtOrderDate)
@@ -249,4 +264,5 @@ Partial Class Orders
     Friend WithEvents Ord_TotalAmount As DataGridViewTextBoxColumn
     Friend WithEvents Cust_ID As DataGridViewTextBoxColumn
     Friend WithEvents txtOrderCustID As TextBox
+    Friend WithEvents btnExport As Button
 End Class

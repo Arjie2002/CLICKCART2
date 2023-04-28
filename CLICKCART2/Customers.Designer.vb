@@ -39,9 +39,8 @@ Partial Class Customers
         txtCustomerLName = New TextBox()
         txtCustomerPhoneNumber = New TextBox()
         btnBrowse = New Button()
-        btnLocate = New Button()
         Label1 = New Label()
-        txtLocation = New TextBox()
+        btnExport = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -205,18 +204,6 @@ Partial Class Customers
         btnBrowse.Text = "Browse .csv"
         btnBrowse.UseVisualStyleBackColor = False
         ' 
-        ' btnLocate
-        ' 
-        btnLocate.BackColor = Color.FromArgb(CByte(255), CByte(224), CByte(192))
-        btnLocate.FlatAppearance.BorderSize = 0
-        btnLocate.FlatStyle = FlatStyle.Flat
-        btnLocate.Location = New Point(60, 564)
-        btnLocate.Name = "btnLocate"
-        btnLocate.Size = New Size(196, 35)
-        btnLocate.TabIndex = 16
-        btnLocate.Text = "Locate Data"
-        btnLocate.UseVisualStyleBackColor = False
-        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
@@ -225,22 +212,26 @@ Partial Class Customers
         Label1.Size = New Size(0, 20)
         Label1.TabIndex = 17
         ' 
-        ' txtLocation
+        ' btnExport
         ' 
-        txtLocation.Location = New Point(287, 564)
-        txtLocation.Multiline = True
-        txtLocation.Name = "txtLocation"
-        txtLocation.Size = New Size(584, 35)
-        txtLocation.TabIndex = 18
+        btnExport.BackColor = Color.FromArgb(CByte(255), CByte(224), CByte(192))
+        btnExport.FlatAppearance.BorderSize = 0
+        btnExport.FlatStyle = FlatStyle.Flat
+        btnExport.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point)
+        btnExport.Location = New Point(60, 561)
+        btnExport.Name = "btnExport"
+        btnExport.Size = New Size(114, 35)
+        btnExport.TabIndex = 19
+        btnExport.Text = "Export"
+        btnExport.UseVisualStyleBackColor = False
         ' 
         ' Customers
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1267, 611)
-        Controls.Add(txtLocation)
+        Controls.Add(btnExport)
         Controls.Add(Label1)
-        Controls.Add(btnLocate)
         Controls.Add(btnBrowse)
         Controls.Add(txtCustomerPhoneNumber)
         Controls.Add(txtCustomerLName)
@@ -279,7 +270,6 @@ Partial Class Customers
     Friend WithEvents Customer_FirstName As DataGridViewTextBoxColumn
     Friend WithEvents Customer_LastName As DataGridViewTextBoxColumn
     Friend WithEvents Customer_PhoneNumber As DataGridViewTextBoxColumn
-    Friend WithEvents btnLocate As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtLocation As TextBox
+    Friend WithEvents btnExport As Button
 End Class

@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.IO
+Imports MySql.Data.MySqlClient
 
 Public Class Orders
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
@@ -89,5 +90,9 @@ Public Class Orders
             .txtOrderAmount.Text = ""
             .txtOrderCustID.Text = ""
         End With
+    End Sub
+
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+        export_to_csv("orders")
     End Sub
 End Class

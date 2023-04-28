@@ -126,14 +126,7 @@ Public Class Customers
             End Try
         End If
     End Sub
-
-    Private Sub btnLocate_Click(sender As Object, e As EventArgs) Handles btnLocate.Click
-        Dim openFileDialog1 As New OpenFileDialog()
-        openFileDialog1.Filter = "Backup Files (*.bat)|*.bat|All Files (*.*)|*.*"
-        openFileDialog1.Title = "Select a Backup File"
-
-        If openFileDialog1.ShowDialog() = DialogResult.OK Then
-            txtLocation.Text = openFileDialog1.FileName
-        End If
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+        export_to_csv("customer")
     End Sub
 End Class

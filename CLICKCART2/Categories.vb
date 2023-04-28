@@ -88,4 +88,8 @@ Public Class Categories
 
         Call Disconnect_to_Db()
     End Sub
+
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+        export_to_csv("category")
+    End Sub
 End Class

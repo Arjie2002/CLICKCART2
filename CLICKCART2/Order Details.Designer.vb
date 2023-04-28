@@ -37,6 +37,7 @@ Partial Class Order_Details
         txtOdetailsProductID = New TextBox()
         txtOdetailsPrice = New TextBox()
         txtOdetailsQuantity = New TextBox()
+        btnExport = New Button()
         CType(OrderDetails, ComponentModel.ISupportInitialize).BeginInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -173,11 +174,25 @@ Partial Class Order_Details
         txtOdetailsQuantity.Size = New Size(280, 30)
         txtOdetailsQuantity.TabIndex = 12
         ' 
+        ' btnExport
+        ' 
+        btnExport.BackColor = Color.FromArgb(CByte(255), CByte(224), CByte(192))
+        btnExport.FlatAppearance.BorderSize = 0
+        btnExport.FlatStyle = FlatStyle.Flat
+        btnExport.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point)
+        btnExport.Location = New Point(62, 564)
+        btnExport.Name = "btnExport"
+        btnExport.Size = New Size(114, 35)
+        btnExport.TabIndex = 20
+        btnExport.Text = "Export"
+        btnExport.UseVisualStyleBackColor = False
+        ' 
         ' Order_Details
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1267, 611)
+        Controls.Add(btnExport)
         Controls.Add(txtOdetailsQuantity)
         Controls.Add(txtOdetailsPrice)
         Controls.Add(txtOdetailsProductID)
@@ -212,4 +227,5 @@ Partial Class Order_Details
     Friend WithEvents Odetails_ProdID As DataGridViewTextBoxColumn
     Friend WithEvents Odetails_Price As DataGridViewTextBoxColumn
     Friend WithEvents Odetails_Quantity As DataGridViewTextBoxColumn
+    Friend WithEvents btnExport As Button
 End Class

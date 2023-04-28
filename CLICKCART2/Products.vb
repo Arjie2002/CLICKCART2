@@ -90,5 +90,7 @@ Public Class Products
         End With
     End Sub
 
-
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+        export_to_csv("product")
+    End Sub
 End Class
