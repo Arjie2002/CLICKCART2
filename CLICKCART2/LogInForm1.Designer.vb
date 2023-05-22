@@ -83,7 +83,7 @@ Partial Class LogInForm1
         MaximizeBox = False
         Name = "LogInForm1"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Form1"
+        Text = "Log-In"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
